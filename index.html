@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What's On Costa Blanca — Events, Markets & Fiestas</title>
   <meta name="description" content="The Costa Blanca's definitive guide to events, fiestas, mercadillos and things to do. Covering Altea, Calpe, Benidorm, Denia, Javea and the whole Costa Blanca.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="What's On Costa Blanca">
+  <meta property="og:description" content="Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.">
+  <meta property="og:image" content="https://whatsoncostablanca.com/preview-banner.png">
+  <meta property="og:url" content="https://whatsoncostablanca.com">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -18,14 +24,15 @@
       justify-content: center;
       padding: 2rem;
     }
-    .sun {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-      animation: pulse 3s ease-in-out infinite;
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1.25rem;
+      animation: pulse 4s ease-in-out infinite;
     }
     @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.85; }
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.04) rotate(3deg); }
     }
     h1 {
       font-size: clamp(1.8rem, 5vw, 3rem);
@@ -36,36 +43,41 @@
       color: #f5c842;
     }
     .tagline {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       text-align: center;
       color: #a8b8c8;
-      margin-bottom: 2.5rem;
-      max-width: 520px;
+      margin-bottom: 2rem;
+      max-width: 500px;
       line-height: 1.6;
     }
     .coming-soon {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #f5c842;
       background: rgba(245, 200, 66, 0.1);
       border: 1px solid rgba(245, 200, 66, 0.3);
-      padding: 0.4rem 1rem;
+      padding: 0.35rem 1rem;
       border-radius: 2rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
-    .form-wrap {
+    .signup-box {
       width: 100%;
       max-width: 420px;
-      margin-bottom: 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
     }
-    .form-wrap p {
+    .signup-box p {
       text-align: center;
       font-size: 0.95rem;
-      color: #a8b8c8;
+      color: #c8d8e8;
       margin-bottom: 1rem;
     }
-    .form-row {
+    /* BEEHIIV EMBED GOES HERE */
+    .beehiiv-placeholder {
       display: flex;
       gap: 0.5rem;
     }
@@ -79,9 +91,7 @@
       font-size: 0.95rem;
       outline: none;
     }
-    input[type="email"]:focus {
-      border-color: rgba(245, 200, 66, 0.5);
-    }
+    input[type="email"]:focus { border-color: rgba(245, 200, 66, 0.5); }
     input[type="email"]::placeholder { color: #5a6a7a; }
     button {
       padding: 0.75rem 1.25rem;
@@ -92,50 +102,48 @@
       font-weight: 700;
       font-size: 0.9rem;
       cursor: pointer;
-      white-space: nowrap;
       transition: background 0.2s;
     }
     button:hover { background: #f7d46a; }
-    .coverage {
-      margin-top: 3rem;
-      text-align: center;
-    }
+    .coverage { text-align: center; }
     .coverage p {
-      font-size: 0.8rem;
-      color: #5a6a7a;
-      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+      color: #4a5a6a;
+      margin-bottom: 0.6rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
     }
     .towns {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
       justify-content: center;
-      max-width: 480px;
+      max-width: 460px;
     }
     .town {
-      font-size: 0.8rem;
-      color: #7a8a9a;
-      background: rgba(255,255,255,0.05);
-      padding: 0.25rem 0.65rem;
+      font-size: 0.78rem;
+      color: #6a7a8a;
+      background: rgba(255,255,255,0.04);
+      padding: 0.2rem 0.6rem;
       border-radius: 1rem;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.07);
     }
   </style>
 </head>
 <body>
-  <div class="sun">☀️</div>
+  <img src="logo.png" alt="What's On Costa Blanca" class="logo">
   <h1>What's On Costa Blanca</h1>
   <p class="tagline">Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.</p>
   <span class="coming-soon">Launching soon</span>
 
-  <div class="form-wrap">
+  <div class="signup-box">
     <p>Get the weekly events guide in your inbox. Free.</p>
-    <div class="form-row">
+    <!-- REPLACE THIS SECTION WITH BEEHIIV EMBED CODE -->
+    <div class="beehiiv-placeholder">
       <input type="email" placeholder="your@email.com">
       <button>Notify me</button>
     </div>
+    <!-- END BEEHIIV EMBED -->
   </div>
 
   <div class="coverage">
