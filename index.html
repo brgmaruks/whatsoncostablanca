@@ -12,123 +12,252 @@
   <meta name="twitter:card" content="summary_large_image">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: #ffffff;
       color: #1a2332;
-      min-height: 100vh;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      width: 100%;
+      height: 280px;
+      background-image: url('preview-banner.png');
+      background-size: cover;
+      background-position: center 60%;
+      position: relative;
+    }
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.95) 100%);
+    }
+
+    /* MAIN CONTENT */
+    .main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      padding: 0 1.5rem 3rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     .logo {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 1.25rem;
+      width: 80px;
+      height: 80px;
+      margin-top: -40px;
+      position: relative;
+      z-index: 1;
       animation: pulse 4s ease-in-out infinite;
     }
     @keyframes pulse {
       0%, 100% { transform: scale(1) rotate(0deg); }
       50% { transform: scale(1.04) rotate(3deg); }
     }
+
     h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 800;
       text-align: center;
       line-height: 1.2;
-      margin-bottom: 0.75rem;
+      margin: 1rem 0 0.6rem;
       color: #1a2332;
     }
+
     .tagline {
-      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
       text-align: center;
       color: #5a6a7a;
-      margin-bottom: 2rem;
-      max-width: 500px;
+      margin-bottom: 1.25rem;
+      max-width: 480px;
       line-height: 1.6;
     }
+
     .coming-soon {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #f5a623;
       background: rgba(245, 166, 35, 0.1);
       border: 1px solid rgba(245, 166, 35, 0.3);
-      padding: 0.35rem 1rem;
+      padding: 0.3rem 0.9rem;
       border-radius: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
     }
+
+    /* EVENTS TEASER */
+    .teaser {
+      width: 100%;
+      background: #fffbf2;
+      border: 1px solid #fde8b0;
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .teaser-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f5a623;
+      margin-bottom: 0.6rem;
+    }
+    .teaser-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #fde8b0;
+      font-size: 0.88rem;
+      color: #3a4a5a;
+    }
+    .teaser-item:last-child { border-bottom: none; }
+    .teaser-dot {
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: #f5a623;
+      margin-top: 2px;
+    }
+
+    /* SIGNUP */
     .signup-box {
       width: 100%;
-      max-width: 460px;
       background: #f8f9fa;
       border: 1px solid #e8ecf0;
       border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
     }
     .signup-box p {
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #5a6a7a;
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
     }
-    .coverage { text-align: center; }
+
+    /* COVERAGE */
+    .coverage { text-align: center; margin-bottom: 2rem; }
     .coverage p {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: #9aaabb;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
     .towns {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.35rem;
+      gap: 0.3rem;
       justify-content: center;
-      max-width: 460px;
     }
     .town {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #7a8a9a;
       background: #f0f4f8;
-      padding: 0.2rem 0.65rem;
+      padding: 0.18rem 0.6rem;
       border-radius: 1rem;
       border: 1px solid #e0e8f0;
     }
+
+    /* SOCIAL */
+    .social {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .social a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      color: #7a8a9a;
+      text-decoration: none;
+      background: #f0f4f8;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2rem;
+      border: 1px solid #e0e8f0;
+      transition: all 0.2s;
+    }
+    .social a:hover { background: #e4eaf2; color: #3a4a5a; }
+
+    /* FOOTER */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.78rem;
+      color: #aabbcc;
+    }
+    footer a { color: #aabbcc; text-decoration: none; }
+    footer a:hover { color: #5a6a7a; }
   </style>
 </head>
 <body>
-  <img src="logo-transparent.png" alt="What's On Costa Blanca" class="logo">
-  <h1>What's On Costa Blanca</h1>
-  <p class="tagline">Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.</p>
-  <span class="coming-soon">Launching soon</span>
 
-  <div class="signup-box">
-    <p>Get the weekly events guide in your inbox. Free.</p>
-    <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-    <iframe src="https://subscribe-forms.beehiiv.com/6534f23d-3ba9-4618-ae22-95d4dc10e0b7" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 339px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
-  </div>
+  <div class="hero-banner"></div>
 
-  <div class="coverage">
-    <p>Covering</p>
-    <div class="towns">
-      <span class="town">Altea</span>
-      <span class="town">Calpe</span>
-      <span class="town">Benidorm</span>
-      <span class="town">Denia</span>
-      <span class="town">Javea</span>
-      <span class="town">Moraira</span>
-      <span class="town">Villajoyosa</span>
-      <span class="town">Alfas del Pi</span>
-      <span class="town">La Nucia</span>
-      <span class="town">Guadalest</span>
-      <span class="town">Callosa</span>
-      <span class="town">Alicante</span>
-      <span class="town">+ more</span>
+  <div class="main">
+    <img src="logo-transparent.png" alt="What's On Costa Blanca" class="logo">
+    <h1>What's On Costa Blanca</h1>
+    <p class="tagline">Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.</p>
+    <span class="coming-soon">Launching soon</span>
+
+    <!-- EVENTS TEASER -->
+    <div class="teaser">
+      <div class="teaser-label">This week on the Costa Blanca</div>
+      <div class="teaser-item"><span class="teaser-dot"></span>Fallas de Valencia — daily mascletàs + nightly fireworks. 90 min drive. Running until March 19.</div>
+      <div class="teaser-item"><span class="teaser-dot"></span>Altea Tuesday market — old town, 9am-2pm. Local produce and crafts.</div>
+      <div class="teaser-item"><span class="teaser-dot"></span>Calpe Thursday mercadillo — fresh produce, clothing, 9am-2pm.</div>
+      <div class="teaser-item"><span class="teaser-dot"></span>Coming up: Semana Santa processions, 29 March across the Costa Blanca.</div>
     </div>
+
+    <!-- SIGNUP -->
+    <div class="signup-box">
+      <p>Get the full weekly guide every Thursday. Free.</p>
+      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+      <iframe src="https://subscribe-forms.beehiiv.com/6534f23d-3ba9-4618-ae22-95d4dc10e0b7" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 200px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
+    </div>
+
+    <!-- COVERAGE -->
+    <div class="coverage">
+      <p>Covering</p>
+      <div class="towns">
+        <span class="town">Altea</span>
+        <span class="town">Calpe</span>
+        <span class="town">Benidorm</span>
+        <span class="town">Denia</span>
+        <span class="town">Javea</span>
+        <span class="town">Moraira</span>
+        <span class="town">Villajoyosa</span>
+        <span class="town">Alfas del Pi</span>
+        <span class="town">La Nucia</span>
+        <span class="town">Guadalest</span>
+        <span class="town">Callosa</span>
+        <span class="town">Alicante</span>
+        <span class="town">+ more</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="social">
+      <a href="https://instagram.com/whatsoncostablanca" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @whatsoncostablanca
+      </a>
+    </div>
+
   </div>
+
+  <footer>
+    &copy; 2026 What's On Costa Blanca &nbsp;|&nbsp;
+    <a href="mailto:hello@whatsoncostablanca.com">hello@whatsoncostablanca.com</a>
+  </footer>
+
 </body>
 </html>
