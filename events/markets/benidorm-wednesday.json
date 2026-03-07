@@ -1,0 +1,47 @@
+{
+  "id": "benidorm-wednesday-market",
+  "name": "Benidorm Wednesday Market",
+  "type": "market",
+  "status": "confirmed",
+  "when": {
+    "date": null,
+    "time_start": "09:00",
+    "time_end": "14:00",
+    "recurring": "weekly",
+    "recurring_day": "wednesday",
+    "all_day": false
+  },
+  "where": {
+    "town": "Benidorm",
+    "venue": "Rincon de Loix area",
+    "maps_url": "https://maps.google.com/?q=38.5368,-0.1321",
+    "lat": 38.5368,
+    "lng": -0.1321
+  },
+  "what": {
+    "description": "Popular outdoor market in the Rincon de Loix area of Benidorm. Known for souvenirs, leather goods, clothing, and fresh produce.",
+    "highlights": ["Souvenirs and gifts", "Leather goods", "Beachwear", "Fresh produce"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": null
+  },
+  "practical": {
+    "parking": "Arrive early for parking, busy area",
+    "transport": "Accessible by local bus",
+    "dogs_allowed": true,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": null
+  },
+  "meta": {
+    "category": "weekly market",
+    "tags": ["market", "shopping", "souvenirs", "tourist"],
+    "source_url": "https://www.benidorm.es",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": null
+  }
+}

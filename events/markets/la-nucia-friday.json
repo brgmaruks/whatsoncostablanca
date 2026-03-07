@@ -1,0 +1,47 @@
+{
+  "id": "la-nucia-friday-market",
+  "name": "La Nucia Friday Market",
+  "type": "market",
+  "status": "confirmed",
+  "when": {
+    "date": null,
+    "time_start": "09:00",
+    "time_end": "14:00",
+    "recurring": "weekly",
+    "recurring_day": "friday",
+    "all_day": false
+  },
+  "where": {
+    "town": "La Nucia",
+    "venue": "Plaza Mayor",
+    "maps_url": "https://maps.google.com/?q=38.6167,-0.1167",
+    "lat": 38.6167,
+    "lng": -0.1167
+  },
+  "what": {
+    "description": "Friendly local market in La Nucia's Plaza Mayor. A great spot for fresh local produce, flowers, and household items in a relaxed atmosphere.",
+    "highlights": ["Fresh flowers", "Local produce", "Household items", "Community atmosphere"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": null
+  },
+  "practical": {
+    "parking": "Parking available near Plaza Mayor",
+    "transport": "Easy access from surrounding areas",
+    "dogs_allowed": true,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": null
+  },
+  "meta": {
+    "category": "weekly market",
+    "tags": ["market", "shopping", "local", "community"],
+    "source_url": "https://www.lanucia.es",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": null
+  }
+}

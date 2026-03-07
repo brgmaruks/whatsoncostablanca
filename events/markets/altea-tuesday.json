@@ -1,0 +1,47 @@
+{
+  "id": "altea-tuesday-market",
+  "name": "Altea Tuesday Market",
+  "type": "market",
+  "status": "confirmed",
+  "when": {
+    "date": null,
+    "time_start": "09:00",
+    "time_end": "14:00",
+    "recurring": "weekly",
+    "recurring_day": "tuesday",
+    "all_day": false
+  },
+  "where": {
+    "town": "Altea",
+    "venue": "Old Town area",
+    "maps_url": "https://maps.google.com/?q=38.5996,-0.0479",
+    "lat": 38.5996,
+    "lng": -0.0479
+  },
+  "what": {
+    "description": "Traditional Spanish street market in the charming Old Town of Altea. Stalls selling fresh produce, clothing, handicrafts, and local goods.",
+    "highlights": ["Fresh local produce", "Handicrafts", "Clothing and accessories", "Local food stalls"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": null
+  },
+  "practical": {
+    "parking": "Street parking available nearby, arrives early for best spots",
+    "transport": "Walkable from Altea town centre",
+    "dogs_allowed": true,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": null
+  },
+  "meta": {
+    "category": "weekly market",
+    "tags": ["market", "shopping", "local produce", "handicrafts"],
+    "source_url": "https://www.altea.es",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "calpe-thursday-market",
+  "name": "Calpe Thursday Market",
+  "type": "market",
+  "status": "confirmed",
+  "when": {
+    "date": null,
+    "time_start": "09:00",
+    "time_end": "14:00",
+    "recurring": "weekly",
+    "recurring_day": "thursday",
+    "all_day": false
+  },
+  "where": {
+    "town": "Calpe",
+    "venue": "Town centre",
+    "maps_url": "https://maps.google.com/?q=38.6442,0.0441",
+    "lat": 38.6442,
+    "lng": 0.0441
+  },
+  "what": {
+    "description": "Large weekly market in Calpe town centre with a wide variety of stalls selling fresh fruits and vegetables, clothes, shoes, bags, and household items.",
+    "highlights": ["Fresh fruit and vegetables", "Fashion and accessories", "Household goods", "Great atmosphere"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": null
+  },
+  "practical": {
+    "parking": "Paid parking nearby, limited free street parking",
+    "transport": "Walkable from Calpe beaches and hotels",
+    "dogs_allowed": true,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": null
+  },
+  "meta": {
+    "category": "weekly market",
+    "tags": ["market", "shopping", "produce", "fashion"],
+    "source_url": "https://www.calpe.es",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": null
+  }
+}

@@ -84,6 +84,33 @@
       margin-bottom: 2rem;
     }
 
+    /* FILTER BAR */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+    .filter-btn {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #f0f4f8;
+      color: #7a8a9a;
+    }
+    .filter-btn:hover {
+      background: #e4eaf2;
+    }
+    .filter-btn.active {
+      background: #f5a623;
+      color: white;
+    }
+
     /* CALENDAR */
     .cal-wrap { width: 100%; margin-bottom: 2.5rem; }
     .cal-header {
@@ -146,6 +173,7 @@
     .evt-market { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
     .evt-fiesta { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
     .evt-show   { background: #f3e5f5; color: #6a1b9a; border: 1px solid #e1bee7; }
+    .evt-hidden { display: none; }
 
     .cal-legend {
       display: flex;
@@ -164,6 +192,14 @@
     .legend-dot.market { background: #66bb6a; }
     .legend-dot.fiesta { background: #ffa726; }
     .legend-dot.show   { background: #ab47bc; }
+
+    /* LOADING MESSAGE */
+    .cal-loading {
+      text-align: center;
+      padding: 2rem;
+      color: #7a8a9a;
+      font-size: 0.95rem;
+    }
 
     /* SIGNUP */
     .signup-section {
@@ -263,6 +299,7 @@
       .cal-date { font-size: 1.1rem; }
       .evt { font-size: 0.58rem; }
       .cal-day { min-height: 95px; padding: 0.4rem 0.2rem; }
+      .filter-btn { font-size: 0.75rem; padding: 0.35rem 0.7rem; }
     }
   </style>
 </head>
@@ -278,63 +315,19 @@
 
     <div class="cal-wrap">
       <div class="cal-header">This week on the Costa Blanca</div>
-      <div class="cal-grid">
-
-        <div class="cal-day">
-          <div class="cal-day-name">Mon</div>
-          <div class="cal-date">9</div>
-          <div class="cal-events"></div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Tue</div>
-          <div class="cal-date">10</div>
-          <div class="cal-events">
-            <div class="evt evt-market">Altea Market</div>
-          </div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Wed</div>
-          <div class="cal-date">11</div>
-          <div class="cal-events">
-            <div class="evt evt-market">Benidorm Market</div>
-          </div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Thu</div>
-          <div class="cal-date">12</div>
-          <div class="cal-events">
-            <div class="evt evt-market">Calpe Market</div>
-          </div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Fri</div>
-          <div class="cal-date">13</div>
-          <div class="cal-events">
-            <div class="evt evt-market">La Nucia Market</div>
-          </div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Sat</div>
-          <div class="cal-date">14</div>
-          <div class="cal-events">
-            <div class="evt evt-market">Alfas del Pi Market</div>
-            <div class="evt evt-fiesta">Fallas Valencia</div>
-          </div>
-        </div>
-
-        <div class="cal-day">
-          <div class="cal-day-name">Sun</div>
-          <div class="cal-date">15</div>
-          <div class="cal-events">
-            <div class="evt evt-fiesta">Fallas Valencia</div>
-          </div>
-        </div>
-
+      
+      <!-- FILTER BAR -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="market">Markets</button>
+        <button class="filter-btn" data-filter="fiesta">Fiestas</button>
+        <button class="filter-btn" data-filter="show">Shows</button>
+        <button class="filter-btn" data-filter="free">Free only</button>
+        <button class="filter-btn" data-filter="family">Family friendly</button>
+      </div>
+      
+      <div class="cal-grid" id="calGrid">
+        <div class="cal-loading">Loading events...</div>
       </div>
       <div class="cal-legend">
         <div class="legend-item"><div class="legend-dot market"></div>Markets</div>
@@ -390,6 +383,176 @@
     &copy; 2026 What's In Costa Blanca &nbsp;|&nbsp;
     <a href="mailto:hello@whatsincostablanca.com">hello@whatsincostablanca.com</a>
   </footer>
+
+  <script>
+    (function() {
+      const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      const fullDayNames = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+      let currentFilter = 'all';
+      let calendarData = null;
+
+      // Parse date string to Date object
+      function parseDate(dateStr) {
+        const parts = dateStr.split('-');
+        return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+      }
+
+      // Format date as YYYY-MM-DD
+      function formatDate(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+      }
+
+      // Get day of week (0 = Monday, 6 = Sunday)
+      function getDayIndex(date) {
+        const idx = date.getDay();
+        return idx === 0 ? 6 : idx - 1;
+      }
+
+      // Add days to a date
+      function addDays(date, days) {
+        const result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+      }
+
+      // Create calendar grid for a week
+      function createCalendarGrid(weekStart) {
+        const startDate = parseDate(weekStart);
+        const grid = document.getElementById('calGrid');
+        const today = new Date();
+        const todayStr = formatDate(today);
+
+        grid.innerHTML = '';
+
+        for (let i = 0; i < 7; i++) {
+          const date = addDays(startDate, i);
+          const dateStr = formatDate(date);
+          const isToday = dateStr === todayStr;
+
+          const dayEl = document.createElement('div');
+          dayEl.className = 'cal-day' + (isToday ? ' today' : '');
+          dayEl.dataset.date = dateStr;
+
+          const dayNameEl = document.createElement('div');
+          dayNameEl.className = 'cal-day-name';
+          dayNameEl.textContent = dayNames[i];
+
+          const dateEl = document.createElement('div');
+          dateEl.className = 'cal-date';
+          dateEl.textContent = date.getDate();
+
+          const eventsEl = document.createElement('div');
+          eventsEl.className = 'cal-events';
+          eventsEl.dataset.date = dateStr;
+
+          dayEl.appendChild(dayNameEl);
+          dayEl.appendChild(dateEl);
+          dayEl.appendChild(eventsEl);
+          grid.appendChild(dayEl);
+        }
+      }
+
+      // Create event pill element
+      function createEventPill(event) {
+        const pill = document.createElement('div');
+        pill.className = 'evt evt-' + event.type;
+        pill.dataset.eventId = event.id;
+        pill.dataset.eventType = event.type;
+        pill.dataset.free = event.what.free_entry;
+        pill.dataset.family = event.what.family_friendly;
+        pill.textContent = event.name;
+        return pill;
+      }
+
+      // Place events in calendar
+      function placeEvents(events) {
+        events.forEach(function(event) {
+          const dateStr = event.when.date;
+          if (!dateStr) return;
+
+          const container = document.querySelector('.cal-events[data-date="' + dateStr + '"]');
+          if (container) {
+            const pill = createEventPill(event);
+            container.appendChild(pill);
+          }
+        });
+
+        applyFilter(currentFilter);
+      }
+
+      // Apply filter to events
+      function applyFilter(filter) {
+        currentFilter = filter;
+        const allPills = document.querySelectorAll('.evt');
+
+        allPills.forEach(function(pill) {
+          let visible = true;
+
+          if (filter === 'market' || filter === 'fiesta' || filter === 'show') {
+            visible = pill.dataset.eventType === filter;
+          } else if (filter === 'free') {
+            visible = pill.dataset.free === 'true';
+          } else if (filter === 'family') {
+            visible = pill.dataset.family === 'true';
+          }
+
+          if (visible) {
+            pill.classList.remove('evt-hidden');
+          } else {
+            pill.classList.add('evt-hidden');
+          }
+        });
+
+        // Update filter button states
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(function(btn) {
+          if (btn.dataset.filter === filter) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      // Setup filter buttons
+      function setupFilters() {
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            applyFilter(btn.dataset.filter);
+          });
+        });
+      }
+
+      // Fetch and render events
+      function loadEvents() {
+        fetch('events/weekly-index.json')
+          .then(function(response) {
+            if (!response.ok) {
+              throw new Error('Failed to load events');
+            }
+            return response.json();
+          })
+          .then(function(data) {
+            calendarData = data;
+            createCalendarGrid(data.week_start);
+            placeEvents(data.events);
+          })
+          .catch(function(error) {
+            console.error('Error loading events:', error);
+            document.getElementById('calGrid').innerHTML = 
+              '<div class="cal-loading">Loading events...</div>';
+          });
+      }
+
+      // Initialize
+      setupFilters();
+      loadEvents();
+    })();
+  </script>
 
 </body>
 </html>

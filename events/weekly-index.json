@@ -1,0 +1,336 @@
+{
+  "week_start": "2026-03-09",
+  "week_end": "2026-03-15",
+  "generated": "2026-03-09T06:00:00Z",
+  "events": [
+    {
+      "id": "altea-tuesday-market-2026-03-10",
+      "name": "Altea Tuesday Market",
+      "type": "market",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-10",
+        "time_start": "09:00",
+        "time_end": "14:00",
+        "recurring": "weekly",
+        "recurring_day": "tuesday",
+        "all_day": false
+      },
+      "where": {
+        "town": "Altea",
+        "venue": "Old Town area",
+        "maps_url": "https://maps.google.com/?q=38.5996,-0.0479",
+        "lat": 38.5996,
+        "lng": -0.0479
+      },
+      "what": {
+        "description": "Traditional Spanish street market in the charming Old Town of Altea. Stalls selling fresh produce, clothing, handicrafts, and local goods.",
+        "highlights": ["Fresh local produce", "Handicrafts", "Clothing and accessories", "Local food stalls"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": null
+      },
+      "practical": {
+        "parking": "Street parking available nearby, arrives early for best spots",
+        "transport": "Walkable from Altea town centre",
+        "dogs_allowed": true,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": null
+      },
+      "meta": {
+        "category": "weekly market",
+        "tags": ["market", "shopping", "local produce", "handicrafts"],
+        "source_url": "https://www.altea.es",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": null
+      }
+    },
+    {
+      "id": "benidorm-wednesday-market-2026-03-11",
+      "name": "Benidorm Wednesday Market",
+      "type": "market",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-11",
+        "time_start": "09:00",
+        "time_end": "14:00",
+        "recurring": "weekly",
+        "recurring_day": "wednesday",
+        "all_day": false
+      },
+      "where": {
+        "town": "Benidorm",
+        "venue": "Rincon de Loix area",
+        "maps_url": "https://maps.google.com/?q=38.5368,-0.1321",
+        "lat": 38.5368,
+        "lng": -0.1321
+      },
+      "what": {
+        "description": "Popular outdoor market in the Rincon de Loix area of Benidorm. Known for souvenirs, leather goods, clothing, and fresh produce.",
+        "highlights": ["Souvenirs and gifts", "Leather goods", "Beachwear", "Fresh produce"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": null
+      },
+      "practical": {
+        "parking": "Arrive early for parking, busy area",
+        "transport": "Accessible by local bus",
+        "dogs_allowed": true,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": null
+      },
+      "meta": {
+        "category": "weekly market",
+        "tags": ["market", "shopping", "souvenirs", "tourist"],
+        "source_url": "https://www.benidorm.es",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": null
+      }
+    },
+    {
+      "id": "calpe-thursday-market-2026-03-12",
+      "name": "Calpe Thursday Market",
+      "type": "market",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-12",
+        "time_start": "09:00",
+        "time_end": "14:00",
+        "recurring": "weekly",
+        "recurring_day": "thursday",
+        "all_day": false
+      },
+      "where": {
+        "town": "Calpe",
+        "venue": "Town centre",
+        "maps_url": "https://maps.google.com/?q=38.6442,0.0441",
+        "lat": 38.6442,
+        "lng": 0.0441
+      },
+      "what": {
+        "description": "Large weekly market in Calpe town centre with a wide variety of stalls selling fresh fruits and vegetables, clothes, shoes, bags, and household items.",
+        "highlights": ["Fresh fruit and vegetables", "Fashion and accessories", "Household goods", "Great atmosphere"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": null
+      },
+      "practical": {
+        "parking": "Paid parking nearby, limited free street parking",
+        "transport": "Walkable from Calpe beaches and hotels",
+        "dogs_allowed": true,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": null
+      },
+      "meta": {
+        "category": "weekly market",
+        "tags": ["market", "shopping", "produce", "fashion"],
+        "source_url": "https://www.calpe.es",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": null
+      }
+    },
+    {
+      "id": "la-nucia-friday-market-2026-03-13",
+      "name": "La Nucia Friday Market",
+      "type": "market",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-13",
+        "time_start": "09:00",
+        "time_end": "14:00",
+        "recurring": "weekly",
+        "recurring_day": "friday",
+        "all_day": false
+      },
+      "where": {
+        "town": "La Nucia",
+        "venue": "Plaza Mayor",
+        "maps_url": "https://maps.google.com/?q=38.6167,-0.1167",
+        "lat": 38.6167,
+        "lng": -0.1167
+      },
+      "what": {
+        "description": "Friendly local market in La Nucia's Plaza Mayor. A great spot for fresh local produce, flowers, and household items in a relaxed atmosphere.",
+        "highlights": ["Fresh flowers", "Local produce", "Household items", "Community atmosphere"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": null
+      },
+      "practical": {
+        "parking": "Parking available near Plaza Mayor",
+        "transport": "Easy access from surrounding areas",
+        "dogs_allowed": true,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": null
+      },
+      "meta": {
+        "category": "weekly market",
+        "tags": ["market", "shopping", "local", "community"],
+        "source_url": "https://www.lanucia.es",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": null
+      }
+    },
+    {
+      "id": "alfas-del-pi-saturday-market-2026-03-14",
+      "name": "Alfas del Pi Saturday Market",
+      "type": "market",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-14",
+        "time_start": "09:00",
+        "time_end": "14:00",
+        "recurring": "weekly",
+        "recurring_day": "saturday",
+        "all_day": false
+      },
+      "where": {
+        "town": "Alfas del Pi",
+        "venue": "Town centre",
+        "maps_url": "https://maps.google.com/?q=38.5797,-0.0661",
+        "lat": 38.5797,
+        "lng": -0.0661
+      },
+      "what": {
+        "description": "Bustling Saturday market in Alfas del Pi town centre. One of the larger markets in the area with extensive stalls selling everything from fresh food to clothing and textiles.",
+        "highlights": ["Extensive food stalls", "Textiles and fabrics", "Footwear", "Plants and flowers"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": null
+      },
+      "practical": {
+        "parking": "Multiple parking areas nearby, can get busy",
+        "transport": "Good bus connections from Benidorm and Altea",
+        "dogs_allowed": true,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": null
+      },
+      "meta": {
+        "category": "weekly market",
+        "tags": ["market", "shopping", "textiles", "food"],
+        "source_url": "https://www.lalfas.es",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-fallas-valencia-2026-03-14",
+      "name": "Fallas de Valencia 2026",
+      "type": "fiesta",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-14",
+        "time_start": "09:00",
+        "time_end": "23:59",
+        "recurring": "annual",
+        "recurring_day": null,
+        "all_day": true
+      },
+      "where": {
+        "town": "Valencia",
+        "venue": "Throughout the city, Plaza Ayuntamiento for mascleta",
+        "maps_url": "https://maps.google.com/?q=Plaza+Ayntamiento,Valencia",
+        "lat": 39.4699,
+        "lng": -0.3763
+      },
+      "what": {
+        "description": "World-famous festival celebrating Saint Joseph with massive sculptural monuments (fallas), fireworks, music, and celebrations. Daily mascleta (gunpowder/firework display) at 14:00 in Plaza Ayuntamiento. The festival culminates in La Crema on March 19, when all the fallas sculptures are burned. Approximately 90 minutes drive from Altea.",
+        "highlights": ["Massive artistic fallas sculptures", "Daily mascleta at 14:00", "Fireworks displays", "Traditional music and parades", "La Crema - the final burning"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": "Free to attend, food and souvenirs extra"
+      },
+      "practical": {
+        "parking": "Very difficult, use public transport from Costa Blanca",
+        "transport": "TRAM from Altea to Valencia, or drive (90 mins)",
+        "dogs_allowed": false,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": "https://www.visitvalencia.com"
+      },
+      "meta": {
+        "category": "annual fiesta",
+        "tags": ["fiesta", "fireworks", "culture", "UNESCO heritage", "Valencia"],
+        "source_url": "https://www.fallas.com",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": "Festival runs March 1-19, 2026. Key events on weekends are best for visitors."
+      }
+    },
+    {
+      "id": "2026-fallas-valencia-2026-03-15",
+      "name": "Fallas de Valencia 2026",
+      "type": "fiesta",
+      "status": "confirmed",
+      "when": {
+        "date": "2026-03-15",
+        "time_start": "09:00",
+        "time_end": "23:59",
+        "recurring": "annual",
+        "recurring_day": null,
+        "all_day": true
+      },
+      "where": {
+        "town": "Valencia",
+        "venue": "Throughout the city, Plaza Ayuntamiento for mascleta",
+        "maps_url": "https://maps.google.com/?q=Plaza+Ayntamiento,Valencia",
+        "lat": 39.4699,
+        "lng": -0.3763
+      },
+      "what": {
+        "description": "World-famous festival celebrating Saint Joseph with massive sculptural monuments (fallas), fireworks, music, and celebrations. Daily mascleta (gunpowder/firework display) at 14:00 in Plaza Ayuntamiento. The festival culminates in La Crema on March 19, when all the fallas sculptures are burned. Approximately 90 minutes drive from Altea.",
+        "highlights": ["Massive artistic fallas sculptures", "Daily mascleta at 14:00", "Fireworks displays", "Traditional music and parades", "La Crema - the final burning"],
+        "family_friendly": true,
+        "free_entry": true,
+        "price": null,
+        "price_notes": "Free to attend, food and souvenirs extra"
+      },
+      "practical": {
+        "parking": "Very difficult, use public transport from Costa Blanca",
+        "transport": "TRAM from Altea to Valencia, or drive (90 mins)",
+        "dogs_allowed": false,
+        "booking_required": false,
+        "booking_url": null,
+        "contact": null,
+        "website": "https://www.visitvalencia.com"
+      },
+      "meta": {
+        "category": "annual fiesta",
+        "tags": ["fiesta", "fireworks", "culture", "UNESCO heritage", "Valencia"],
+        "source_url": "https://www.fallas.com",
+        "source_verified": true,
+        "scout_confidence": "high",
+        "last_verified": "2026-03-07",
+        "notes": "Festival runs March 1-19, 2026. Key events on weekends are best for visitors."
+      }
+    }
+  ]
+}

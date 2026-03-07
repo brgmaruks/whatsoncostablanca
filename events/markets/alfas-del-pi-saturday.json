@@ -1,0 +1,47 @@
+{
+  "id": "alfas-del-pi-saturday-market",
+  "name": "Alfas del Pi Saturday Market",
+  "type": "market",
+  "status": "confirmed",
+  "when": {
+    "date": null,
+    "time_start": "09:00",
+    "time_end": "14:00",
+    "recurring": "weekly",
+    "recurring_day": "saturday",
+    "all_day": false
+  },
+  "where": {
+    "town": "Alfas del Pi",
+    "venue": "Town centre",
+    "maps_url": "https://maps.google.com/?q=38.5797,-0.0661",
+    "lat": 38.5797,
+    "lng": -0.0661
+  },
+  "what": {
+    "description": "Bustling Saturday market in Alfas del Pi town centre. One of the larger markets in the area with extensive stalls selling everything from fresh food to clothing and textiles.",
+    "highlights": ["Extensive food stalls", "Textiles and fabrics", "Footwear", "Plants and flowers"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": null
+  },
+  "practical": {
+    "parking": "Multiple parking areas nearby, can get busy",
+    "transport": "Good bus connections from Benidorm and Altea",
+    "dogs_allowed": true,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": null
+  },
+  "meta": {
+    "category": "weekly market",
+    "tags": ["market", "shopping", "textiles", "food"],
+    "source_url": "https://www.lalfas.es",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": null
+  }
+}

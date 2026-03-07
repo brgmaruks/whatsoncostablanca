@@ -1,0 +1,47 @@
+{
+  "id": "2026-fallas-valencia",
+  "name": "Fallas de Valencia 2026",
+  "type": "fiesta",
+  "status": "confirmed",
+  "when": {
+    "date": "2026-03-01",
+    "time_start": "00:00",
+    "time_end": "23:59",
+    "recurring": "annual",
+    "recurring_day": null,
+    "all_day": true
+  },
+  "where": {
+    "town": "Valencia",
+    "venue": "Throughout the city, Plaza Ayuntamiento for mascleta",
+    "maps_url": "https://maps.google.com/?q=Plaza+Ayntamiento,Valencia",
+    "lat": 39.4699,
+    "lng": -0.3763
+  },
+  "what": {
+    "description": "World-famous festival celebrating Saint Joseph with massive sculptural monuments (fallas), fireworks, music, and celebrations. Daily mascleta (gunpowder/firework display) at 14:00 in Plaza Ayuntamiento. The festival culminates in La Crema on March 19, when all the fallas sculptures are burned. Approximately 90 minutes drive from Altea.",
+    "highlights": ["Massive artistic fallas sculptures", "Daily mascleta at 14:00", "Fireworks displays", "Traditional music and parades", "La Crema - the final burning"],
+    "family_friendly": true,
+    "free_entry": true,
+    "price": null,
+    "price_notes": "Free to attend, food and souvenirs extra"
+  },
+  "practical": {
+    "parking": "Very difficult, use public transport from Costa Blanca",
+    "transport": "TRAM from Altea to Valencia, or drive (90 mins)",
+    "dogs_allowed": false,
+    "booking_required": false,
+    "booking_url": null,
+    "contact": null,
+    "website": "https://www.visitvalencia.com"
+  },
+  "meta": {
+    "category": "annual fiesta",
+    "tags": ["fiesta", "fireworks", "culture", "UNESCO heritage", "Valencia"],
+    "source_url": "https://www.fallas.com",
+    "source_verified": true,
+    "scout_confidence": "high",
+    "last_verified": "2026-03-07",
+    "notes": "Festival runs March 1-19, 2026. Key events on weekends are best for visitors."
+  }
+}
