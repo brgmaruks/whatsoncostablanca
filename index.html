@@ -6,7 +6,7 @@
   <title>What's On Costa Blanca - Events, Markets & Fiestas</title>
   <meta name="description" content="The Costa Blanca's definitive guide to events, fiestas, mercadillos and things to do. Covering Altea, Calpe, Benidorm, Denia, Javea and the whole Costa Blanca.">
   <meta property="og:title" content="What's On Costa Blanca">
-  <meta property="og:description" content="Fiestas, mercadillos, festivals and things to do. Curated weekly for the whole Costa Blanca.">
+  <meta property="og:description" content="Your free weekly guide to the best of the Costa Blanca.">
   <meta property="og:image" content="https://whatsoncostablanca.com/preview-banner.png">
   <meta property="og:url" content="https://whatsoncostablanca.com">
   <meta name="twitter:card" content="summary_large_image">
@@ -58,20 +58,19 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-size: clamp(2.4rem, 6vw, 4rem);
       font-weight: 800;
       text-align: center;
-      line-height: 1.15;
+      line-height: 1.1;
       margin: 0.75rem 0 0.6rem;
       color: #1a2332;
     }
     .tagline {
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
       text-align: center;
       color: #5a6a7a;
       margin-bottom: 1.25rem;
-      max-width: 560px;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     .coming-soon {
       font-size: 0.85rem;
@@ -86,12 +85,9 @@
     }
 
     /* CALENDAR */
-    .cal-wrap {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
+    .cal-wrap { width: 100%; margin-bottom: 2.5rem; }
     .cal-header {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -101,14 +97,14 @@
     .cal-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 0.4rem;
+      gap: 0.5rem;
     }
     .cal-day {
       background: #f8f9fa;
       border: 1px solid #e8ecf0;
       border-radius: 0.6rem;
-      padding: 0.6rem 0.35rem;
-      min-height: 120px;
+      padding: 0.7rem 0.35rem;
+      min-height: 130px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -118,18 +114,19 @@
       border-color: #f5a623;
     }
     .cal-day-name {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       color: #9aaabb;
       letter-spacing: 0.07em;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.3rem;
     }
     .cal-date {
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 800;
       color: #1a2332;
       margin-bottom: 0.5rem;
+      line-height: 1;
     }
     .cal-day.today .cal-date { color: #f5a623; }
     .cal-events {
@@ -139,8 +136,8 @@
       width: 100%;
     }
     .evt {
-      font-size: 0.65rem;
-      padding: 0.2rem 0.3rem;
+      font-size: 0.68rem;
+      padding: 0.22rem 0.3rem;
       border-radius: 0.25rem;
       text-align: center;
       line-height: 1.3;
@@ -150,40 +147,32 @@
     .evt-fiesta { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
     .evt-show   { background: #f3e5f5; color: #6a1b9a; border: 1px solid #e1bee7; }
 
-    /* LEGEND */
     .cal-legend {
       display: flex;
-      gap: 1rem;
+      gap: 1.25rem;
       margin-top: 0.75rem;
       flex-wrap: wrap;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      font-size: 0.8rem;
+      gap: 0.4rem;
+      font-size: 0.82rem;
       color: #7a8a9a;
     }
-    .legend-dot {
-      width: 10px; height: 10px;
-      border-radius: 2px;
-    }
+    .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
     .legend-dot.market { background: #66bb6a; }
     .legend-dot.fiesta { background: #ffa726; }
     .legend-dot.show   { background: #ab47bc; }
 
-    /* SIGNUP */
-    .signup-box {
+    /* SIGNUP -- raw Beehiiv, no wrapper styling */
+    .signup-section {
       width: 100%;
-      background: #f8f9fa;
-      border: 1px solid #e8ecf0;
-      border-radius: 1rem;
-      padding: 1.5rem;
       margin-bottom: 2rem;
-    }
-    .signup-box p {
       text-align: center;
-      font-size: 1rem;
+    }
+    .signup-section p {
+      font-size: 1.05rem;
       color: #5a6a7a;
       margin-bottom: 1rem;
     }
@@ -191,7 +180,7 @@
     /* COVERAGE */
     .coverage { text-align: center; margin-bottom: 1.75rem; }
     .coverage-label {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: #9aaabb;
       margin-bottom: 0.6rem;
       text-transform: uppercase;
@@ -204,10 +193,10 @@
       justify-content: center;
     }
     .town {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: #7a8a9a;
       background: #f0f4f8;
-      padding: 0.22rem 0.7rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 1rem;
       border: 1px solid #e0e8f0;
     }
@@ -215,7 +204,7 @@
     /* WHY SUBSCRIBE */
     .why { width: 100%; margin-bottom: 2rem; }
     .why-title {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -223,12 +212,17 @@
       text-align: center;
       margin-bottom: 0.85rem;
     }
-    .why-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: center;
+    }
     .why-item {
       display: flex;
       align-items: center;
       gap: 0.7rem;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: #4a5a6a;
     }
     .why-check {
@@ -244,11 +238,11 @@
     }
 
     /* SOCIAL */
-    .social { display: flex; gap: 1rem; margin-bottom: 2.5rem; }
+    .social { display: flex; gap: 1rem; margin-bottom: 2.5rem; justify-content: center; }
     .social a {
       display: flex; align-items: center; gap: 0.45rem;
-      font-size: 0.9rem; color: #7a8a9a; text-decoration: none;
-      background: #f0f4f8; padding: 0.4rem 1rem;
+      font-size: 0.92rem; color: #7a8a9a; text-decoration: none;
+      background: #f0f4f8; padding: 0.45rem 1.1rem;
       border-radius: 2rem; border: 1px solid #e0e8f0;
       transition: all 0.2s;
     }
@@ -265,10 +259,10 @@
 
     /* MOBILE */
     @media (max-width: 520px) {
-      .cal-day-name { font-size: 0.58rem; }
-      .cal-date { font-size: 1rem; }
-      .evt { font-size: 0.55rem; }
-      .cal-day { min-height: 90px; padding: 0.4rem 0.2rem; }
+      .cal-day-name { font-size: 0.6rem; }
+      .cal-date { font-size: 1.1rem; }
+      .evt { font-size: 0.58rem; }
+      .cal-day { min-height: 95px; padding: 0.4rem 0.2rem; }
     }
   </style>
 </head>
@@ -279,7 +273,7 @@
   <div class="main">
     <img src="logo-transparent.png" alt="What's On Costa Blanca" class="logo">
     <h1>What's On Costa Blanca</h1>
-    <p class="tagline">Fiestas, mercadillos, festivals and things to do. Curated weekly for the whole Costa Blanca.</p>
+    <p class="tagline">Your free weekly guide to fiestas, markets and things to do across the Costa Blanca.</p>
     <span class="coming-soon">Launching soon</span>
 
     <div class="cal-wrap">
@@ -349,10 +343,10 @@
       </div>
     </div>
 
-    <div class="signup-box">
+    <div class="signup-section">
       <p>Get the full weekly guide every Thursday. Free.</p>
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/6534f23d-3ba9-4618-ae22-95d4dc10e0b7" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 180px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
+      <iframe src="https://subscribe-forms.beehiiv.com/6534f23d-3ba9-4618-ae22-95d4dc10e0b7" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 180px; border: none; background: transparent;"></iframe>
     </div>
 
     <div class="coverage">
