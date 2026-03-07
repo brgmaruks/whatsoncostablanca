@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's On Costa Blanca — Events, Markets & Fiestas</title>
+  <title>What's On Costa Blanca - Events, Markets & Fiestas</title>
   <meta name="description" content="The Costa Blanca's definitive guide to events, fiestas, mercadillos and things to do. Covering Altea, Calpe, Benidorm, Denia, Javea and the whole Costa Blanca.">
   <meta property="og:title" content="What's On Costa Blanca">
-  <meta property="og:description" content="Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.">
+  <meta property="og:description" content="Fiestas, mercadillos, festivals and things to do. Curated weekly for the whole Costa Blanca.">
   <meta property="og:image" content="https://whatsoncostablanca.com/preview-banner.png">
   <meta property="og:url" content="https://whatsoncostablanca.com">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,7 @@
     /* HERO BANNER */
     .hero-banner {
       width: 100%;
-      height: 150px;
+      height: 180px;
       background-image: url('preview-banner.png');
       background-size: cover;
       background-position: center 60%;
@@ -39,10 +39,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 1.5rem 3rem;
-      max-width: 640px;
+      padding: 0 2rem 4rem;
+      max-width: 760px;
       margin: 0 auto;
     }
+
     .logo {
       width: 200px;
       height: 200px;
@@ -55,58 +56,59 @@
       0%, 100% { transform: scale(1) rotate(0deg); }
       50% { transform: scale(1.03) rotate(3deg); }
     }
+
     h1 {
-      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
       font-weight: 800;
       text-align: center;
-      line-height: 1.2;
-      margin: 0.75rem 0 0.5rem;
+      line-height: 1.15;
+      margin: 0.75rem 0 0.6rem;
       color: #1a2332;
     }
     .tagline {
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
       text-align: center;
       color: #5a6a7a;
       margin-bottom: 1.25rem;
-      max-width: 480px;
+      max-width: 560px;
       line-height: 1.6;
     }
     .coming-soon {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #f5a623;
       background: rgba(245, 166, 35, 0.1);
       border: 1px solid rgba(245, 166, 35, 0.3);
-      padding: 0.3rem 0.9rem;
+      padding: 0.35rem 1.1rem;
       border-radius: 2rem;
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
     }
 
     /* CALENDAR */
     .cal-wrap {
       width: 100%;
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
     }
     .cal-header {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #f5a623;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.75rem;
     }
     .cal-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 0.3rem;
+      gap: 0.4rem;
     }
     .cal-day {
       background: #f8f9fa;
       border: 1px solid #e8ecf0;
-      border-radius: 0.5rem;
-      padding: 0.4rem 0.25rem;
-      min-height: 100px;
+      border-radius: 0.6rem;
+      padding: 0.6rem 0.35rem;
+      min-height: 120px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -116,57 +118,54 @@
       border-color: #f5a623;
     }
     .cal-day-name {
-      font-size: 0.58rem;
+      font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
       color: #9aaabb;
-      letter-spacing: 0.06em;
-      margin-bottom: 0.2rem;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.25rem;
     }
     .cal-date {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #1a2332;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
     }
-    .cal-day.today .cal-date {
-      color: #f5a623;
-    }
+    .cal-day.today .cal-date { color: #f5a623; }
     .cal-events {
       display: flex;
       flex-direction: column;
-      gap: 0.2rem;
+      gap: 0.25rem;
       width: 100%;
     }
     .evt {
-      font-size: 0.58rem;
-      padding: 0.15rem 0.25rem;
-      border-radius: 0.2rem;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.3rem;
+      border-radius: 0.25rem;
       text-align: center;
       line-height: 1.3;
       word-break: break-word;
     }
-    .evt-market  { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
-    .evt-fiesta  { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
-    .evt-show    { background: #f3e5f5; color: #6a1b9a; border: 1px solid #e1bee7; }
+    .evt-market { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+    .evt-fiesta { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+    .evt-show   { background: #f3e5f5; color: #6a1b9a; border: 1px solid #e1bee7; }
 
     /* LEGEND */
     .cal-legend {
       display: flex;
-      gap: 0.75rem;
-      margin-top: 0.6rem;
+      gap: 1rem;
+      margin-top: 0.75rem;
       flex-wrap: wrap;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 0.3rem;
-      font-size: 0.7rem;
+      gap: 0.35rem;
+      font-size: 0.8rem;
       color: #7a8a9a;
     }
     .legend-dot {
-      width: 8px;
-      height: 8px;
+      width: 10px; height: 10px;
       border-radius: 2px;
     }
     .legend-dot.market { background: #66bb6a; }
@@ -179,77 +178,77 @@
       background: #f8f9fa;
       border: 1px solid #e8ecf0;
       border-radius: 1rem;
-      padding: 1.25rem;
+      padding: 1.5rem;
       margin-bottom: 2rem;
     }
     .signup-box p {
       text-align: center;
-      font-size: 0.92rem;
+      font-size: 1rem;
       color: #5a6a7a;
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
     }
 
     /* COVERAGE */
-    .coverage { text-align: center; margin-bottom: 1.5rem; }
+    .coverage { text-align: center; margin-bottom: 1.75rem; }
     .coverage-label {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       color: #9aaabb;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
     .towns {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.3rem;
+      gap: 0.4rem;
       justify-content: center;
     }
     .town {
-      font-size: 0.75rem;
+      font-size: 0.82rem;
       color: #7a8a9a;
       background: #f0f4f8;
-      padding: 0.18rem 0.6rem;
+      padding: 0.22rem 0.7rem;
       border-radius: 1rem;
       border: 1px solid #e0e8f0;
     }
 
     /* WHY SUBSCRIBE */
-    .why { width: 100%; margin-bottom: 1.75rem; }
+    .why { width: 100%; margin-bottom: 2rem; }
     .why-title {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #9aaabb;
       text-align: center;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
-    .why-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .why-list { display: flex; flex-direction: column; gap: 0.6rem; }
     .why-item {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.88rem;
+      gap: 0.7rem;
+      font-size: 0.95rem;
       color: #4a5a6a;
     }
     .why-check {
-      width: 18px; height: 18px; min-width: 18px;
+      width: 22px; height: 22px; min-width: 22px;
       background: #f0faf0;
       border: 1px solid #b0ddb0;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       color: #3aaa5a;
     }
 
     /* SOCIAL */
     .social { display: flex; gap: 1rem; margin-bottom: 2.5rem; }
     .social a {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-size: 0.82rem; color: #7a8a9a; text-decoration: none;
-      background: #f0f4f8; padding: 0.35rem 0.85rem;
+      display: flex; align-items: center; gap: 0.45rem;
+      font-size: 0.9rem; color: #7a8a9a; text-decoration: none;
+      background: #f0f4f8; padding: 0.4rem 1rem;
       border-radius: 2rem; border: 1px solid #e0e8f0;
       transition: all 0.2s;
     }
@@ -259,17 +258,17 @@
     footer {
       width: 100%; text-align: center;
       padding: 1.5rem; border-top: 1px solid #f0f0f0;
-      font-size: 0.78rem; color: #aabbcc;
+      font-size: 0.85rem; color: #aabbcc;
     }
     footer a { color: #aabbcc; text-decoration: none; }
     footer a:hover { color: #5a6a7a; }
 
     /* MOBILE */
-    @media (max-width: 480px) {
-      .cal-day-name { font-size: 0.5rem; }
-      .cal-date { font-size: 0.85rem; }
-      .evt { font-size: 0.5rem; padding: 0.1rem 0.2rem; }
-      .cal-day { min-height: 80px; padding: 0.3rem 0.15rem; }
+    @media (max-width: 520px) {
+      .cal-day-name { font-size: 0.58rem; }
+      .cal-date { font-size: 1rem; }
+      .evt { font-size: 0.55rem; }
+      .cal-day { min-height: 90px; padding: 0.4rem 0.2rem; }
     }
   </style>
 </head>
@@ -280,18 +279,19 @@
   <div class="main">
     <img src="logo-transparent.png" alt="What's On Costa Blanca" class="logo">
     <h1>What's On Costa Blanca</h1>
-    <p class="tagline">Fiestas, mercadillos, festivals and things to do — curated weekly for the whole Costa Blanca.</p>
+    <p class="tagline">Fiestas, mercadillos, festivals and things to do. Curated weekly for the whole Costa Blanca.</p>
     <span class="coming-soon">Launching soon</span>
 
-    <!-- WEEKLY CALENDAR -->
     <div class="cal-wrap">
       <div class="cal-header">This week on the Costa Blanca</div>
       <div class="cal-grid">
+
         <div class="cal-day">
           <div class="cal-day-name">Mon</div>
           <div class="cal-date">9</div>
           <div class="cal-events"></div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Tue</div>
           <div class="cal-date">10</div>
@@ -299,6 +299,7 @@
             <div class="evt evt-market">Altea Market</div>
           </div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Wed</div>
           <div class="cal-date">11</div>
@@ -306,6 +307,7 @@
             <div class="evt evt-market">Benidorm Market</div>
           </div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Thu</div>
           <div class="cal-date">12</div>
@@ -313,6 +315,7 @@
             <div class="evt evt-market">Calpe Market</div>
           </div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Fri</div>
           <div class="cal-date">13</div>
@@ -320,6 +323,7 @@
             <div class="evt evt-market">La Nucia Market</div>
           </div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Sat</div>
           <div class="cal-date">14</div>
@@ -328,6 +332,7 @@
             <div class="evt evt-fiesta">Fallas Valencia</div>
           </div>
         </div>
+
         <div class="cal-day">
           <div class="cal-day-name">Sun</div>
           <div class="cal-date">15</div>
@@ -335,6 +340,7 @@
             <div class="evt evt-fiesta">Fallas Valencia</div>
           </div>
         </div>
+
       </div>
       <div class="cal-legend">
         <div class="legend-item"><div class="legend-dot market"></div>Markets</div>
@@ -343,14 +349,12 @@
       </div>
     </div>
 
-    <!-- SIGNUP -->
     <div class="signup-box">
       <p>Get the full weekly guide every Thursday. Free.</p>
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe src="https://subscribe-forms.beehiiv.com/6534f23d-3ba9-4618-ae22-95d4dc10e0b7" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 180px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
     </div>
 
-    <!-- COVERAGE -->
     <div class="coverage">
       <div class="coverage-label">Covering</div>
       <div class="towns">
@@ -370,7 +374,6 @@
       </div>
     </div>
 
-    <!-- WHY SUBSCRIBE -->
     <div class="why">
       <div class="why-title">Why subscribe?</div>
       <div class="why-list">
@@ -380,10 +383,9 @@
       </div>
     </div>
 
-    <!-- SOCIAL -->
     <div class="social">
       <a href="https://instagram.com/whatsoncostablanca" target="_blank">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         @whatsoncostablanca
       </a>
     </div>
